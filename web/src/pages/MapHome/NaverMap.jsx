@@ -104,8 +104,8 @@ function NaverMap() {
       path: clickedDay.places.map((place) => place.position),
       strokeColor: '#FF8282',
       strokeWeight: 2,
-      startIcon: naver.maps.PointingIcon.CIRCLE,
-      endIcon: naver.maps.PointingIcon.OPEN_ARROW,
+      startIcon: new window.naver.maps.PointingIcon.CIRCLE,
+      endIcon: new window.naver.maps.PointingIcon.OPEN_ARROW,
       startIconSize: 10,
       endIconSize: 15,
     });
@@ -135,9 +135,9 @@ function NaverMap() {
         position: new window.naver.maps.LatLng(markers[i].lat, markers[i].lng),
         icon: {
           content: `<img src=${iconSrc} style="width:40px;"/>`,
-          size: new naver.maps.Size(10, 12),
-          origin: new naver.maps.Point(0, 0),
-          anchor: new naver.maps.Point(20, 37),
+          size: new window.naver.maps.Size(10, 12),
+          origin: new window.naver.maps.Point(0, 0),
+          anchor: new window.naver.maps.Point(20, 37),
         },
         zIndex: 100,
       });

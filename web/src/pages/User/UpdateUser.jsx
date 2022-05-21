@@ -42,7 +42,7 @@ const navigate = useNavigate();
   // * : useEffects
 
   const onDeleteUser = async () => {
-    const willDelete = confirm('정말 탈퇴 하시겠습니까?');
+    const willDelete = window.confirm('정말 탈퇴 하시겠습니까?');
     if (willDelete) {
       try {
         const isDeleted = await axios.delete(
