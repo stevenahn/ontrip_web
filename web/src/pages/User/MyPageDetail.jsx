@@ -92,7 +92,7 @@ function MyPageDetail({ setIsConfirmScheduleOpen, scheduleInfo }) {
     }
 
     try {
-      const isDeleted = await axios.delete(`http://127.0.0.1:3001/users/mypage-trip-history/${username}/${id}`, {
+      const isDeleted = await axios.delete(`http://13.124.152.197:3001/users/mypage-trip-history/${username}/${id}`, {
         headers: { 'x-auth-token': localStorage.getItem('accessToken') },
       });
       alert('삭제 되었습니다.');

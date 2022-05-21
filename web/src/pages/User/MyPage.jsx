@@ -96,6 +96,8 @@ function MyPage() {
     alert('로그아웃 되었습니다.');
     localStorage.removeItem('accessToken');
     localStorage.removeItem('username');
+
+
     setAuthState({ username: '', email: '', status: false });
     navigate('/');
   };
@@ -203,7 +205,7 @@ function MyPage() {
   //   if (id) {
   //     try {
   //       const historyDetail = await axios.get(
-  //         `http://127.0.0.1:3001/users/trip-schedule/${authState.username}/${id}`,
+  //         `http://13.124.152.197:3001/users/trip-schedule/${authState.username}/${id}`,
   //         { headers: { 'x-auth-token': localStorage.getItem('accessToken') } },
   //       );
   //       myPageHistory.map((history) => {

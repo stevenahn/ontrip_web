@@ -50,7 +50,7 @@ function ChangeId({ username, setOpenChangeId }) {
       return;
     }
     try{
-      const isChanged = await axios.put('http://127.0.0.1:3001/users/change-username',{
+      const isChanged = await axios.put('http://13.124.152.197:3001/users/change-username',{
         email: authState.email,
         newUsername: newUserName,
       });

@@ -70,7 +70,7 @@ function SearchPassword({ setOpenSearchPassword }) {
       let changePassword;
       try {
         changePassword = await axios.put(
-          'http://127.0.0.1:3001/users/change-password',
+          'http://13.124.152.197:3001/users/change-password',
           {
             email: formik.values.email,
             newPassword: formik.values.password},
@@ -97,7 +97,7 @@ function SearchPassword({ setOpenSearchPassword }) {
     }
     alert('E-mail로 보안 코드를 전송하였습니다.');
     await axios
-      .post('http://127.0.0.1:3001/users/email-auth', formik.values)
+      .post('http://13.124.152.197:3001/users/email-auth', formik.values)
       .then((e) => {
         setEmailCheck(e.data.SecurityCode);
       });
@@ -118,7 +118,7 @@ function SearchPassword({ setOpenSearchPassword }) {
       let checkValidate = null;
       try {
         checkValidate = await axios.post(
-          'http://127.0.0.1:3001/users/findPassword',
+          'http://13.124.152.197:3001/users/findPassword',
           formik.values,
         );
       } catch (e) {
