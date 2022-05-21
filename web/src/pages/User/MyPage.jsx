@@ -106,7 +106,7 @@ function MyPage() {
     if (historyId) {
       try {
         const historyDetail = await axios.get(
-          `http://localhost:3001/users/trip-schedule/${authState.username}/${historyId}`,
+          `http://13.124.152.197:3001/users/trip-schedule/${authState.username}/${historyId}`,
           { headers: { 'x-auth-token': localStorage.getItem('accessToken') } },
         );
         myPageHistory.map((history) => {
@@ -155,7 +155,7 @@ function MyPage() {
     const username = localStorage.getItem('username');
     try {
       basicInfo = await axios.get(
-        `http://localhost:3001/users/basicInfo/${username}`,
+        `http://13.124.152.197:3001/users/basicInfo/${username}`,
       );
       setAuthState({
         username: basicInfo.data.username,
@@ -169,13 +169,13 @@ function MyPage() {
     // 일정들 받아오기
     try {
       const myPageHistory = await axios.get(
-        `http://localhost:3001/users/mypage-trip-history/${basicInfo.data.username}`,
+        `http://13.124.152.197:3001/users/mypage-trip-history/${basicInfo.data.username}`,
         { headers: { 'x-auth-token': localStorage.getItem('accessToken') } },
       );
       if (myPageHistory.data.error) {
         try {
           const newAccessToken = await axios.post(
-            `http://localhost:3001/users/token`,
+            `http://13.124.152.197:3001/users/token`,
             {
               username: localStorage.getItem('username'),
             },
