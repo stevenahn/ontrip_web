@@ -193,7 +193,7 @@ function MyPage() {
         setMyPageHistory(myPageHistory.data);
       }
     } catch (e) {
-      console.log('Error', e);
+      console.log('Error in MyPage 196', e);
     }
   }, [isConfirmScheduleOpen]);
  // detail 정보 표기
