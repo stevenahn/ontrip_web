@@ -163,6 +163,7 @@ function MyPage() {
         status: true,
       });
     } catch (e) {
+      console.log('Error in MyPage 166', e);
       console.log(e);
     }
     // 일정들 받아오기
