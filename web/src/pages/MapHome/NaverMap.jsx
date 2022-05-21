@@ -104,8 +104,8 @@ function NaverMap() {
       path: clickedDay.places.map((place) => place.position),
       strokeColor: '#FF8282',
       strokeWeight: 2,
-      startIcon: new window.naver.maps.PointingIcon.CIRCLE,
-      endIcon: new window.naver.maps.PointingIcon.OPEN_ARROW,
+      // startIcon: window.naver.maps.PointingIcon.CIRCLE,
+      // endIcon: window.naver.maps.PointingIcon.OPEN_ARROW,
       startIconSize: 10,
       endIconSize: 15,
     });

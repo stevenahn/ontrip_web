@@ -35,6 +35,7 @@ function SignUp() {
     await axios
       .post('http://127.0.0.1:3001/users/email-auth', formik.values)
       .then((e) => {
+        console.log(e.data.SecurityCode)
         setEmailCheck(e.data.SecurityCode);
       });
   };
