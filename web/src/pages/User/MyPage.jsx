@@ -168,13 +168,13 @@ function MyPage() {
     // 일정들 받아오기
     try {
       const myPageHistory = await axios.get(
-        `http://127.0.0.1:3001/users/mypage-trip-history/${basicInfo.data.username}`,
+        `http://localhost:3001/users/mypage-trip-history/${basicInfo.data.username}`,
         { headers: { 'x-auth-token': localStorage.getItem('accessToken') } },
       );
       if (myPageHistory.data.error) {
         try {
           const newAccessToken = await axios.post(
-            `http://127.0.0.1:3001/users/token`,
+            `http://localhost:3001/users/token`,
             {
               username: localStorage.getItem('username'),
             },
