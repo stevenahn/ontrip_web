@@ -149,7 +149,7 @@ function MyPage() {
   },[isConfirmScheduleOpen])
   //  마이페이지 정보 받아오기
   useEffect(async () => {
-    
+    console.log("myPage is started");
     // user 정보 갱신 by accessToken
     let basicInfo;
     const username = localStorage.getItem('username');

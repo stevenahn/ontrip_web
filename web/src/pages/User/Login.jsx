@@ -22,7 +22,7 @@ function Login() {
   const [openSearchId, setOpenSearchId] = useState(false);
   const [openSearchPassword, setOpenSearchPassword] = useState(false);
   const navigate = useNavigate();
-
+console.log("login is started");
   // * : formik
   const formik = useFormik({
     initialValues: {
