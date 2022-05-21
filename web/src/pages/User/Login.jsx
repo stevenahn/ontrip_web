@@ -36,7 +36,7 @@ console.log("login is started");
     onSubmit: async (values) => {
       let isLogin = null;
     try {
-      isLogin = await axios.post('http://13.124.152.197:3001/users/login', values);
+      isLogin = await axios.post('https://ec2-13-124-152-197.ap-northeast-2.compute.amazonaws.com/users/login', values);
     } catch (e) {
       console.log(e);
       return;
