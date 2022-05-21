@@ -106,7 +106,7 @@ function MyPage() {
     if (historyId) {
       try {
         const historyDetail = await axios.get(
-          `http://127.0.0.1:3001/users/trip-schedule/${authState.username}/${historyId}`,
+          `http://localhost:3001/users/trip-schedule/${authState.username}/${historyId}`,
           { headers: { 'x-auth-token': localStorage.getItem('accessToken') } },
         );
         myPageHistory.map((history) => {
