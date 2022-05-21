@@ -70,7 +70,7 @@ function NaverMap() {
     [clickedDay],
   );
   const getInfoFromCenterPoint = (point) => {
-    return axios.post('http://localhost:3001/compare-distance', {
+    return axios.post('http://127.0.0.1:3001/compare-distance', {
       start: [
         centerPoint.current.point['_lng'],
         centerPoint.current.point['_lat'],

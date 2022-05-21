@@ -33,7 +33,7 @@ function SignUp() {
   const onEmail = async () => {
     alert('E-mail로 보안 코드를 전송하였습니다.');
     await axios
-      .post('http://localhost:3001/users/email-auth', formik.values)
+      .post('http://127.0.0.1:3001/users/email-auth', formik.values)
       .then((e) => {
         setEmailCheck(e.data.SecurityCode);
       });
@@ -75,7 +75,7 @@ function SignUp() {
       }
       let isLogin;
       try {
-        isLogin = await axios.post('http://localhost:3001/users', values);
+        isLogin = await axios.post('http://127.0.0.1:3001/users', values);
       } catch (e) {
         console.log(e);
       }

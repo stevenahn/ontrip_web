@@ -54,7 +54,7 @@ function MapHome() {
     let basicInfo;
     try {
       basicInfo = await axios.get(
-        `http://localhost:3001/users/basicInfo/${username}`,
+        `http://127.0.0.1:3001/users/basicInfo/${username}`,
       );
       setAuthState({
         username: basicInfo.data.username,

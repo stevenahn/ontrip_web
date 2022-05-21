@@ -97,7 +97,7 @@ function MapHomeRight() {
   const searchPlace = async () => {
     const area = localStorage.getItem('area');
     await axios
-      .post('http://localhost:3001/search/search', {
+      .post('http://127.0.0.1:3001/search/search', {
         search: `${area} ${searchValue}`,
       })
       .then((res) => {
@@ -123,7 +123,7 @@ function MapHomeRight() {
     let recSport = [];
     try {
       const res = await axios.post(
-        `http://localhost:3001/recommend-${keyword}/search-keyword`,
+        `http://127.0.0.1:3001/recommend-${keyword}/search-keyword`,
         { keyword: area },
       );
       //console.log(data.data.response.body.items.item);
@@ -146,7 +146,7 @@ function MapHomeRight() {
     if (keyword === 'place') {
       try {
         const res = await axios.post(
-          `http://localhost:3001/recommend-sport/search-keyword`,
+          `http://127.0.0.1:3001/recommend-sport/search-keyword`,
           { keyword: area },
         );
         console.log(res);
@@ -175,7 +175,7 @@ function MapHomeRight() {
   const showInfo = async (item) => {
     try {
       const res = await axios.post(
-        `http://localhost:3001/recommend-${item.tag}/detailIntro`,
+        `http://127.0.0.1:3001/recommend-${item.tag}/detailIntro`,
         { contentId: item.contentId },
       );
       const information = {

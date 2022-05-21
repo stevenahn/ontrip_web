@@ -178,7 +178,7 @@ function ConfirmSchedule({ setIsConfirmScheduleOpen, scheduleInfo }) {
     // submit하기 전에 token 갱신
     try{
       const newAccessToken = await axios.post(
-        `http://localhost:3001/users/token`,
+        `http://127.0.0.1:3001/users/token`,
         {
           username: localStorage.getItem('username'),
         },
@@ -208,7 +208,7 @@ function ConfirmSchedule({ setIsConfirmScheduleOpen, scheduleInfo }) {
     // });
     await axios
       .post(
-        'http://localhost:3001/users/trip-schedule',
+        'http://127.0.0.1:3001/users/trip-schedule',
         {
           username: authState.username,
           area: scheduleInfo.area,

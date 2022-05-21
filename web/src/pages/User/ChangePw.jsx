@@ -45,7 +45,7 @@ function ChangePw({ setOpenChangePw }) {
   const onChange = async () => {
     if(newPassword === checkPassword){
       try{
-        const isChanged = await axios.put('http://localhost:3001/users/change-password',{
+        const isChanged = await axios.put('http://127.0.0.1:3001/users/change-password',{
           email: authState.email,
           newPassword
         });

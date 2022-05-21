@@ -36,7 +36,7 @@ function Login() {
     onSubmit: async (values) => {
       let isLogin = null;
     try {
-      isLogin = await axios.post('http://localhost:3001/users/login', values);
+      isLogin = await axios.post('http://127.0.0.1:3001/users/login', values);
     } catch (e) {
       console.log(e);
       return;

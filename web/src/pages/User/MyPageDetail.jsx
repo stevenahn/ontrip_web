@@ -72,7 +72,7 @@ function MyPageDetail({ setIsConfirmScheduleOpen, scheduleInfo }) {
   const onDeleteSchedule = async () => {
     try {
       const newAccessToken = await axios.post(
-        `http://localhost:3001/users/token`,
+        `http://127.0.0.1:3001/users/token`,
         {
           username: localStorage.getItem('username'),
         },
@@ -92,7 +92,7 @@ function MyPageDetail({ setIsConfirmScheduleOpen, scheduleInfo }) {
     }
 
     try {
-      const isDeleted = await axios.delete(`http://localhost:3001/users/mypage-trip-history/${username}/${id}`, {
+      const isDeleted = await axios.delete(`http://127.0.0.1:3001/users/mypage-trip-history/${username}/${id}`, {
         headers: { 'x-auth-token': localStorage.getItem('accessToken') },
       });
       alert('삭제 되었습니다.');
